@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">КИПиА</string>
+
+    <string name="units_of_measurement">Единицы измерения</string>
+    <string name="scale_signal_converter">Шкала-сигнал</string>
+    <string name="temperature_sensor">Датчики температуры</string>
+    <string name="flowrate_primary_devices">Сужающие устройства</string>
+    <string name="geometric_calculations">Геометрия</string>
+    <string name="electric_calculation">Электрика</string>
+    <string name="reference_information">Справочная информация</string>
+    <string name="users_articles">Пользовательская документация</string>
+
+    <string-array name="main_string_array">
+        <item>Единицы измерения</item>
+        <item>Шкала-сигнал</item>
+        <item>Датчики температуры</item>
+        <item>Сужающие устройства</item>
+        <item>Геометрия</item>
+        <item>Электрика</item>
+        <item>Справочная информация</item>
+        <item>Пользовательская документация</item>
+    </string-array>
+
+    <string-array name="units_of_mesurement_array">
+        <item>Давление</item>
+        <item>Масса</item>
+        <item>Температура</item>
+        <item>Расстояние</item>
+        <item>Объём</item>
+        <item>Площадь</item>
+        <item>Скорость</item>
+        <item>Время</item>
+        <item>Ускороение</item>
+        <item>Плотность</item>
+        <item>Энергия</item>
+        <item>Сила</item>
+        <item>Force</item>
+        <item>Angular units</item>
+        <item>Rotation</item>
+        <item>Torque</item>
+        <item>Объёмный расход</item>
+        <item>Массовый расход</item>
+        <item>Ionizing radiation</item>
+        <item>Радиоактивность</item>
+        <item>Децибелы</item>
+        <item>Вязкость</item>
+    </string-array>
+
+    <string name="international_system_of_units_si">Международная система единиц (СИ)</string>
+    <string name="derivatives_and_non_si_metric_units">Редкоиспользуемые</string>
+    <string name="atmosphere">Атмосфера</string>
+    <string name="water_column">Water column</string>
+    <string name="mercury_column">Mercury column</string>
+    <string name="us_and_britain">США и Британия</string>
+    <string name="usa">США</string>
+    <string name="britian">Британия</string>
+</resources>

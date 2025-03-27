@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">KIP&amp;A</string>
+
+    <string name="units_of_measurement">Units of measurement</string>
+    <string name="scale_signal_converter">Scale signal converter</string>
+    <string name="temperature_sensor">Temperature sensor</string>
+    <string name="flowrate_primary_devices">Flowrate primary devices</string>
+    <string name="geometric_calculations">Geometric calculations</string>
+    <string name="electric_calculation">Electric calculation</string>
+    <string name="reference_information">Reference information</string>
+    <string name="users_articles">Users articles</string>
+
+    <string-array name="main_string_array">
+        <item>Units of measurement</item>
+        <item>Scale signal converter</item>
+        <item>Temperature sensor</item>
+        <item>Flowrate primary devices</item>
+        <item>Geometric calculations</item>
+        <item>Electric calculation</item>
+        <item>Reference information</item>
+        <item>Users articles</item>
+    </string-array>
+
+    <string-array name="units_of_mesurement_array">
+        <item>Pressure</item>
+        <item>Weight</item>
+        <item>Temperature</item>
+        <item>Lenght</item>
+        <item>Volume</item>
+        <item>Area</item>
+        <item>Speed</item>
+        <item>Time</item>
+        <item>Acceleration</item>
+        <item>Density</item>
+        <item>Energy</item>
+        <item>Power</item>
+        <item>Force</item>
+        <item>Angular units</item>
+        <item>Rotation</item>
+        <item>Torque</item>
+        <item>Volume flow rate</item>
+        <item>Mass flow rate</item>
+        <item>Ionizing radiation</item>
+        <item>Radioactivity</item>
+        <item>Decibels</item>
+        <item>Viscosity</item>
+    </string-array>
+
+    <string name="international_system_of_units_si">International System of Units (SI)</string>
+    <string name="derivatives_and_non_si_metric_units">Derivatives and non-SI metric units</string>
+    <string name="atmosphere">Atmosphere</string>
+    <string name="water_column">Water column</string>
+    <string name="mercury_column">Mercury column</string>
+    <string name="us_and_britain">US and Britian</string>
+    <string name="usa">USA</string>
+    <string name="britian">Britian</string>
+
+</resources>
