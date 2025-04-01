@@ -1,6 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/temperature">
 
+    <TextView
+        android:id="@+id/tvInternationalSystemOfUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/international_system_of_units_si"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTemperatureCelsium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInternationalSystemOfUnits" />
+
+    <TextView
+        android:id="@+id/tvTemperatureCelsium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TemperatureCelcium"
+        app:layout_constraintBottom_toBottomOf="@+id/etTemperatureCelsium"
+        app:layout_constraintStart_toEndOf="@+id/etTemperatureCelsium"
+        app:layout_constraintTop_toTopOf="@+id/etTemperatureCelsium" />
+
+    <EditText
+        android:id="@+id/etTemperatureKelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTemperatureCelsium" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TemperatureKelvin"
+        app:layout_constraintBottom_toBottomOf="@+id/etTemperatureKelvin"
+        app:layout_constraintStart_toEndOf="@+id/etTemperatureKelvin"
+        app:layout_constraintTop_toTopOf="@+id/etTemperatureKelvin" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/us_and_britain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTemperatureKelvin" />
+
+    <EditText
+        android:id="@+id/etTemperatureFahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/tvUSandBritian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TemperatureFahrenheit"
+        app:layout_constraintBottom_toBottomOf="@+id/etTemperatureFahrenheit"
+        app:layout_constraintStart_toEndOf="@+id/etTemperatureFahrenheit"
+        app:layout_constraintTop_toTopOf="@+id/etTemperatureFahrenheit" />
+
+    <TextView
+        android:id="@+id/tvRarelyUsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rarely_used"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTemperatureFahrenheit" />
+
+    <EditText
+        android:id="@+id/etTemperatureRankine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRarelyUsed" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TemperatureRankina"
+        app:layout_constraintBottom_toBottomOf="@+id/etTemperatureRankine"
+        app:layout_constraintStart_toEndOf="@+id/etTemperatureRankine"
+        app:layout_constraintTop_toTopOf="@+id/etTemperatureRankine" />
+
+    <EditText
+        android:id="@+id/etTemperatureReamur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTemperatureRankine" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TemperatureReaumur"
+        app:layout_constraintBottom_toBottomOf="@+id/etTemperatureReamur"
+        app:layout_constraintStart_toEndOf="@+id/etTemperatureReamur"
+        app:layout_constraintTop_toBottomOf="@+id/etTemperatureRankine" />
 </androidx.constraintlayout.widget.ConstraintLayout>

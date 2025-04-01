@@ -10,6 +10,12 @@
     <string name="reference_information">Reference information</string>
     <string name="users_articles">Users articles</string>
 
+    <string name="TemperatureCelcium">"\u2103"</string>
+    <string name="TemperatureKelvin">"\u212A"</string>
+    <string name="TemperatureFahrenheit">"\u2109"</string>
+    <string name="TemperatureRankina">"\u00B0R"</string>
+    <string name="TemperatureReaumur">"\u00B0Re"</string>
+
     <string-array name="main_string_array">
         <item>Units of measurement</item>
         <item>Scale signal converter</item>
@@ -54,5 +60,6 @@
     <string name="us_and_britain">US and Britian</string>
     <string name="usa">USA</string>
     <string name="britian">Britian</string>
+    <string name="rarely_used">Rarely used</string>
 
 </resources>

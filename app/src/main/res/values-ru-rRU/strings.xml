@@ -11,6 +11,12 @@
     <string name="reference_information">Справочная информация</string>
     <string name="users_articles">Пользовательская документация</string>
 
+    <string name="TemperatureCelcium">"\u2103"</string>
+    <string name="TemperatureKelvin">"\u212A"</string>
+    <string name="TemperatureFahrenheit">"\u2109"</string>
+    <string name="TemperatureRankina">"\u00B0R"</string>
+    <string name="TemperatureReaumur">"\u00B0Re"</string>
+
     <string-array name="main_string_array">
         <item>Единицы измерения</item>
         <item>Шкала-сигнал</item>
@@ -55,4 +61,5 @@
     <string name="us_and_britain">США и Британия</string>
     <string name="usa">США</string>
     <string name="britian">Британия</string>
+    <string name="rarely_used">Редко используемые</string>
 </resources>
