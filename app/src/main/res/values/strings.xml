@@ -62,4 +62,18 @@
     <string name="britian">Britian</string>
     <string name="rarely_used">Rarely used</string>
 
+    <string-array name="scale_type">
+        <item>Linear scale</item>
+        <item>Linear, decreasing scale</item>
+        <item>Quadratic scale</item>
+        <item>Quadratic, decreasing scale</item>
+        <item>Rootsquaring scale</item>
+        <item>Rootsquaring, decreasing scale</item>
+    </string-array>
+
+    <string name="physical_value">Physical value</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="unified_signal">Unified signal</string>
+
 </resources>
