@@ -64,12 +64,12 @@
     <string name="rarely_used">Редко используемые</string>
 
     <string-array name="scale_type">
-        <item>Linear scale</item>
-        <item>Linear, decreasing scale</item>
-        <item>Quadratic scale</item>
-        <item>Quadratic, decreasing scale</item>
-        <item>Rootsquaring scale</item>
-        <item>Rootsquaring, decreasing scale</item>
+        <item>Линейная шкала</item>
+        <item>Линейная, убывающая шкала</item>
+        <item>Квадратичная шкала</item>
+        <item>Квадратичная, убывающая шкала</item>
+        <item>Корнеизвлекающая шкала</item>
+        <item>Корнеизвлекающая, убывающая шкала</item>
     </string-array>
 
     <string name="physical_value">Physical value</string>

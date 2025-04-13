@@ -17,7 +17,7 @@ import ru.sergeipavlov.kipa.units_of_measurement.TemperatureActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button;
+    Button button, button1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        button1 = findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, ScaleSignalConverter.class);
+                startActivity(myIntent);
+            }
+        });
 //        RecyclerView recyclerView = findViewById(R.id.recycler);
 //        recyclerView.layoutManager = new LinearLayoutManager(this);
 //        recyclerView.setAdapter(customAdapter);
