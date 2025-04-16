@@ -3,8 +3,8 @@ package ru.sergeipavlov.kipa;
 import static android.widget.Toast.LENGTH_LONG;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.view.KeyEvent;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -31,8 +31,7 @@ public class ScaleSignalConverter extends AppCompatActivity {
     public double getEtPhysicalValue() {
         double physicalValue;
         if (etPhysicalValue.getText().length() == 0) {
-            physicalValue = 0;
-            setEtPhysicalValue(physicalValue);
+            physicalValue = 50.;
         } else {
             physicalValue = Double.parseDouble(etPhysicalValue.getText().toString());
         }
@@ -46,8 +45,7 @@ public class ScaleSignalConverter extends AppCompatActivity {
     public double getEtPhysicalValueEnd() {
         double physicalValueEnd;
         if (etPhysicalValueEnd.getText().length() == 0) {
-            physicalValueEnd = 0;
-            setEtPhysicalValueEnd(physicalValueEnd);
+            physicalValueEnd = 100.;
         } else {
             physicalValueEnd = Double.parseDouble(etPhysicalValueEnd.getText().toString());
         }
@@ -61,8 +59,7 @@ public class ScaleSignalConverter extends AppCompatActivity {
     public double getEtPhysicalValueStart() {
         double physicalValueStart;
         if (etPhysicalValueStart.getText().length() == 0) {
-            physicalValueStart = 0;
-            setEtPhysicalValueStart(physicalValueStart);
+            physicalValueStart = 0.;
         } else {
             physicalValueStart = Double.parseDouble(etPhysicalValueStart.getText().toString());
         }
@@ -76,8 +73,7 @@ public class ScaleSignalConverter extends AppCompatActivity {
     public double getEtUnifiedSignal() {
         double unifiedSignal;
         if (etUnifiedSignal.getText().length() == 0) {
-            unifiedSignal = 0;
-            setEtUnifiedSignal(unifiedSignal);
+            unifiedSignal = 12.;
         } else {
             unifiedSignal = Double.parseDouble(etUnifiedSignal.getText().toString());
         }
@@ -91,8 +87,7 @@ public class ScaleSignalConverter extends AppCompatActivity {
     public double getEtUnifiedSignalEnd() {
         double unifiedSignalEnd;
         if (etUnifiedSignalEnd.getText().length() == 0) {
-            unifiedSignalEnd = 0;
-            setEtUnifiedSignalEnd(unifiedSignalEnd);
+            unifiedSignalEnd = 20.;
         } else {
             unifiedSignalEnd = Double.parseDouble(etUnifiedSignalEnd.getText().toString());
         }
@@ -106,8 +101,7 @@ public class ScaleSignalConverter extends AppCompatActivity {
     public double getEtUnifiedSignalStart() {
         double unifiedSignalStart;
         if (etUnifiedSignalStart.getText().length() == 0) {
-            unifiedSignalStart = 0;
-            setEtUnifiedSignalStart(unifiedSignalStart);
+            unifiedSignalStart = 4.;
         } else {
             unifiedSignalStart = Double.parseDouble(etUnifiedSignalStart.getText().toString());
         }
@@ -161,7 +155,6 @@ public class ScaleSignalConverter extends AppCompatActivity {
                 scaleTypeID = 6;
                 break;
         }
-        //Toast.makeText(this, String.valueOf(scaleTypeID), LENGTH_LONG).show();
         return scaleTypeID;
     }
 
@@ -189,117 +182,55 @@ public class ScaleSignalConverter extends AppCompatActivity {
         etUnifiedSignalStart = findViewById(R.id.etUnifiedSignalStart);
         etUnifiedSignalEnd = findViewById(R.id.etUnifiedSignalEnd);
 
-        etPhysicalValueStart.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        checkForNull();
 
-            }
-
+        etPhysicalValueStart.setOnKeyListener(new View.OnKeyListener() {
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (etPhysicalValueStart.hasFocus()) {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
                 calcPhysicalValue();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
+                return false;
             }
         });
 
-        etPhysicalValueEnd.addTextChangedListener(new TextWatcher() {
+        etPhysicalValueEnd.setOnKeyListener(new View.OnKeyListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (etPhysicalValueEnd.hasFocus()) {
-                    calcPhysicalValue();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                calcPhysicalValue();
+                return false;
             }
         });
 
-        etPhysicalValue.addTextChangedListener(new TextWatcher() {
+        etPhysicalValue.setOnKeyListener(new View.OnKeyListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (etPhysicalValue.hasFocus()) {
-                    calcUnifiedSignal();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        etUnifiedSignal.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (etUnifiedSignal.hasFocus()) {
-                    calcPhysicalValue();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        etUnifiedSignalStart.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (etUnifiedSignalStart.hasFocus()) {
-                    calcPhysicalValue();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        etUnifiedSignalEnd.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (etUnifiedSignalEnd.hasFocus()) {
-                    calcPhysicalValue();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                calcUnifiedSignal();
+                return false;
             }
         });
 
+        etUnifiedSignal.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                calcPhysicalValue();
+                return false;
+            }
+        });
+
+        etUnifiedSignalStart.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                calcPhysicalValue();
+                return false;
+            }
+        });
+
+        etUnifiedSignalEnd.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                calcPhysicalValue();
+                return false;
+            }
+        });
     }
 
     private void calcUnifiedSignal() {
@@ -317,7 +248,6 @@ public class ScaleSignalConverter extends AppCompatActivity {
         sge = getEtUnifiedSignalEnd();
 
         scaleTypeID = getSpScaleType();
-        //Toast.makeText(this, String.valueOf(scaleTypeID), LENGTH_LONG).show();
 
         if (scaleTypeID == 1) {
             unifiedSignal =
@@ -325,30 +255,23 @@ public class ScaleSignalConverter extends AppCompatActivity {
         } else if (scaleTypeID == 2) {
             unifiedSignal =
                     ((scv - scs) / (sce - scs)) * (sgs - sge) + sge;
-            return;
         } else if (scaleTypeID == 3) {
             unifiedSignal =
                     Math.pow(((scv - scs) / (sce - scs)), 2) * (sge - sgs) + sgs;
-            return;
         } else if (scaleTypeID == 4) {
             unifiedSignal =
                     Math.pow(((scv - scs) / (sce - scs)), 2) * (sgs - sge) + sge;
-            return;
         } else if (scaleTypeID == 5) {
             unifiedSignal =
                     Math.sqrt(((scv - scs) / (sce - scs))) * (sge - sgs) + sgs;
-            return;
         } else if (scaleTypeID == 6) {
             unifiedSignal =
                     Math.sqrt(((scv - scs) / (sce - scs))) * (sgs - sge) + sge;
-            return;
         } else {
             Toast.makeText(this, "Error", LENGTH_LONG).show();
         }
-        Toast.makeText(this, String.valueOf(unifiedSignal), LENGTH_LONG).show();
         setEtUnifiedSignal(unifiedSignal);
     }
-
 
     private void calcPhysicalValue() {
         double scs, sce, sgv,
@@ -369,30 +292,44 @@ public class ScaleSignalConverter extends AppCompatActivity {
         if (scaleTypeID == 1) {
             physicalValue =
                     ((sgv - sgs) / (sge - sgs)) * (sce - scs) + scs;
-            return;
         } else if (scaleTypeID == 2) {
             physicalValue =
                     ((sgv - sge) / (sgs - sge)) * (sce - scs) + scs;
-            return;
         } else if (scaleTypeID == 3) {
             physicalValue =
                     Math.sqrt(((sgv - sgs) /  (sge - sgs)) * (sce - scs) + scs);
-            return;
         } else if (scaleTypeID == 4) {
             physicalValue =
                     Math.sqrt(((sgv - sge) /  (sgs - sge)) * (sce - scs) + scs);
-            return;
         } else if (scaleTypeID == 5) {
             physicalValue =
                     Math.pow(((sgv - sgs) / (sge - sgs)),2) * (sce - scs) + scs;
-            return;
         } else if (scaleTypeID == 6) {
             physicalValue =
                     Math.pow(((sgv - sge) / (sgs - sge)),2) * (sce - scs) + scs;
-            return;
         } else {
             Toast.makeText(this, "Error", LENGTH_LONG).show();
         }
         setEtPhysicalValue(physicalValue);
+    }
+
+    void checkForNull() {
+        if (etPhysicalValueStart.length() == 0)
+            setEtPhysicalValueStart(0.);
+
+        if (etPhysicalValueEnd.length() == 0)
+            setEtPhysicalValueEnd(100.);
+
+        if (etPhysicalValue.length() == 0)
+            setEtPhysicalValue(50.);
+
+        if (etUnifiedSignal.length() == 0)
+            setEtUnifiedSignal(12.);
+
+        if (etUnifiedSignalStart.length() == 0)
+            setEtUnifiedSignalStart(4.);
+
+        if (etUnifiedSignalEnd.length() == 0)
+            setEtUnifiedSignalEnd(20.);
     }
 }

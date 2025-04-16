@@ -22,7 +22,8 @@
         android:ems="10"
         android:inputType="number|numberDecimal|numberSigned"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInternationalSystemOfUnits" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInternationalSystemOfUnits"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/tvTemperatureCelsium"
@@ -40,7 +41,8 @@
         android:ems="10"
         android:inputType="number|numberDecimal|numberSigned"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTemperatureCelsium" />
+        app:layout_constraintTop_toBottomOf="@+id/etTemperatureCelsium"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -67,7 +69,8 @@
         android:ems="10"
         android:inputType="number|numberDecimal|numberSigned"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/tvUSandBritian"
@@ -94,7 +97,8 @@
         android:ems="10"
         android:inputType="number|numberDecimal|numberSigned"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRarelyUsed" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRarelyUsed"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/textView7"
@@ -112,7 +116,8 @@
         android:ems="10"
         android:inputType="number|numberDecimal|numberSigned"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTemperatureRankine" />
+        app:layout_constraintTop_toBottomOf="@+id/etTemperatureRankine"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/textView8"
